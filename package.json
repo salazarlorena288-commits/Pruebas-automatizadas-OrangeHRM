@@ -1,0 +1,16 @@
+{
+  "name": "pruebaorange",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "keywords": [],
+  "author": "Lorena Salazar",
+  "license": "ISC",
+  "description": "pruebas sobre el sitio de OrangeHRM para postulación a la vacante QA automation tester",
+  "devDependencies": {
+    "cypress": "^15.2.0",
+    "cypress-file-upload": "^5.0.8"
+  }
+}
