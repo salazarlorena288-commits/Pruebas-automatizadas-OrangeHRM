@@ -2,9 +2,9 @@ name: Cypress - login.cy.js
 
 on:
   push:
-    branches: [main]
+    branches: [master]
   pull_request:
-    branches: [main]
+    branches: [master]
 
 jobs:
   run-cypress:
@@ -15,12 +15,15 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Configurar Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Instalar dependencias
         run: npm install
+
+      - name: Instalar binario de Cypress
+        run: npx cypress install
 
       - name: Ejecutar solo la prueba login.cy.js
         run: npx cypress run --spec "cypress/e2e/login.cy.js"
