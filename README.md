@@ -33,24 +33,19 @@
 ## ✅ Requisitos Previos
 
 - Node.js
-- npm
-- Opcional: Git
 
 ## 🧪 Instalación de Cypress
 
-1. Agregar Cypress como dependencia: **npm install cypress --save-dev**
-2. Iniciar proyecto Cypress
-   npx cypress open
+1. Agregar Cypress como dependencia: `npm install cypress --save-dev`
+2. Iniciar proyecto Cypress: `npx cypress open`
 
-Estructura de carpetas:
+## 🧰 Estructura del Proyecto
 
 - ➡️ cypress/
   - ⏩ e2e/
   - ⏩ fixtures/
   - ⏩ support/
 - ➡️ cypress.config.js
-
-## 🧰 Estructura del Proyecto
 
 - **cypress/e2e/**: aquí van tus pruebas (.cy.js o .cy.ts)
 - **cypress/fixtures/**: datos de prueba en formato JSON
@@ -59,5 +54,9 @@ Estructura de carpetas:
 
 ## Ejecución de Cypress
 
-- Modo interactivo: **npx cypress open**
-- Modo headless (CI/CD): **npx cypress run**
+- Modo interactivo: `npx cypress open`
+
+  Este comando se ejecuta desde la terminal de nuestro proyecto. Abre ventana de Cypress en donde se selecciona la opción e2e, nos abrira la suit de pruebas en donde daremos click a "Login" y se dara inicio la ejecuón de nuestros test.
+
+- Modo headless (CI/CD): `npx cypress run`  
+  Este comando se ejecuta desde la terminal de nuestro proyecto. Nos hara la ejecucón de los test en la misma terminal y mostrara los errores (en caso de tenerlos), el porcentaje de aprobación y una imagen referente.
