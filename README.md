@@ -36,7 +36,7 @@
 - npm
 - Opcional: Git
 
-##🧪 Instalación de Cypress
+## 🧪 Instalación de Cypress
 
 1. Agregar Cypress como dependencia: **npm install cypress --save-dev**
 2. Iniciar proyecto Cypress
