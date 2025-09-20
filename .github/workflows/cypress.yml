@@ -1,0 +1,26 @@
+name: Cypress - login.cy.js
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  run-cypress:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar el repositorio
+        uses: actions/checkout@v3
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Ejecutar solo la prueba login.cy.js
+        run: npx cypress run --spec "cypress/e2e/login.cy.js"
